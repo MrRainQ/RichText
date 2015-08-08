@@ -1,0 +1,42 @@
+//
+//  RQTextCode-Prefix.pch
+//  RQTextCode
+//
+//  Created by qiupeng on 15/8/7.
+//  Copyright (c) 2015年 Roc. All rights reserved.
+//
+
+#ifndef RQTextCode_RQTextCode_Prefix_pch
+#define RQTextCode_RQTextCode_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define HMLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define HMLog(...)
+#endif
+
+#define HMScreenW [UIScreen mainScreen].bounds.size.width
+
+
+#define RQTextFont [UIFont systemFontOfSize:14]
+
+// 富文本字体
+#define RQStatusRichTextFont RQTextFont
+
+#define HMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define HMStatusHighTextColor HMColor(255, 255, 0)
+
+// 富文本里面出现的链接
+#define HMLinkText @"HMLinkText"
+
+// 链接选中的通知
+#define HMLinkDidSelectedNotification @"HMLinkDidSelectedNotification"
+
